@@ -67,4 +67,8 @@ startgroup
 create_hw_bitstream -hw_device [lindex [get_hw_devices $hw_device] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices $hw_device] 0]]; program_hw_devices [lindex [get_hw_devices $hw_device] 0]; refresh_hw_device [lindex [get_hw_devices $hw_device] 0];
 program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices $hw_device] 0]]
 
+endgroup
+boot_hw_device  [lindex [get_hw_devices xcu280_u55c_0] 0]
+refresh_hw_device [lindex [get_hw_devices xcu280_u55c_0] 0]
+
 exit
